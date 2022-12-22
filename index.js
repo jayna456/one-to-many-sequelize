@@ -1,5 +1,6 @@
 const express = require("express");
 const sequelize = require("./utils/db");
+const cors = require("cors");
 require("dotenv").config();
 
 const tutorialRoute = require("./routes/tutorial.route");
@@ -8,6 +9,7 @@ const commentRoute = require("./routes/comment.route");
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 app.use("/tutorial", tutorialRoute);
 app.use("/comment", commentRoute);

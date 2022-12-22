@@ -8,7 +8,7 @@ const createTutorial = async (tutorial) => {
 };
 
 const findById = async (id) => {
-  return await Tutorial.findByPk(tutorialId, {
+  return await Tutorial.findByPk(id, {
     include: [{ model: Comment, as: "comments" }],
   });
 };

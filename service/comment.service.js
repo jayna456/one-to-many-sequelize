@@ -7,7 +7,7 @@ const createComment = async (tutorialId, comment) => {
   return await Comment.create({
     name: comment.name,
     text: comment.text,
-    tutorialId,
+    tutorialId: tutorialId,
   });
 };
 

@@ -6,7 +6,7 @@ const {
 
 const router = express.Router();
 
-router.post("/", async (req, res) => insertComment);
+router.post("/", insertComment);
 
 router.get("/getCommentById/:id", findCommentById);
 
