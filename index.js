@@ -7,12 +7,13 @@ const tutorialRoute = require("./routes/tutorial.route");
 const commentRoute = require("./routes/comment.route");
 
 const app = express();
+const router = express.Router();
 
 app.use(express.json());
 app.use(cors());
 
-app.use("/tutorial", tutorialRoute);
-app.use("/comment", commentRoute);
+router.use("/tutorial", tutorialRoute);
+router.use("/comment", commentRoute);
 
 sequelize
   .authenticate()
